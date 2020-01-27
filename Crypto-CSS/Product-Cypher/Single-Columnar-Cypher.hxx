@@ -15,9 +15,12 @@ std::vector<std::size_t> tag_sort (const T& v)
    return result;
 }
 
-std::string SingleColumnarCypher (const std::string& p_text, const std::string key)
+std::string SingleColumnarCypher (std::string p_text, const std::string key)
 {
-   auto const pad = (p_text.size () / key.size () + 1) * key.size () - p_text.size ();
+   auto const pad = (p_text.size () / key.size () + 1) * key.size ();
+   p_text.reserve (pad);
+   for (std::size_t i = p_text.size(); i < pad; ++i)
+      p_text.push_back(' ');
 
    std::string c_text;
    c_text.reserve (p_text.size ());
