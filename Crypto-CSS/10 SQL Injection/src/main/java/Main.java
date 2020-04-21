@@ -49,7 +49,7 @@ class Main {
         JScrollPane scrollBar = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
         jf.add(scrollBar);
 
-        label1 = new javax.swing.JLabel("User Login. To perform auth, anything' OR '1'='1");
+        label1 = new javax.swing.JLabel("User Login.To perform auth, anything' OR '1'='1");
         label1.setFont(new Font("Monotype Corsiva", Font.BOLD, 24));
         label1.setBounds(400, 20, 500, 40);
         jf.add(label1);
@@ -62,6 +62,7 @@ class Main {
         usernameField = new javax.swing.JTextField();
         usernameField.setFont(new Font("Monotype Corsiva", Font.BOLD, 24));
         usernameField.setBounds(400, 80, 150, 30);
+        usernameField.setToolTipText("Default Value: user");
         jf.add(usernameField);
 
         label1 = new javax.swing.JLabel("Password");
@@ -72,6 +73,7 @@ class Main {
         passwordfield = new javax.swing.JPasswordField();
         passwordfield.setFont(new Font("Monotype Corsiva", Font.BOLD, 24));
         passwordfield.setBounds(400, 200, 150, 30);
+        passwordfield.setToolTipText("Default Value: pass");
         jf.add(passwordfield);
 
         login = new javax.swing.JButton("Login");
